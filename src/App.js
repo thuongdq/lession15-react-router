@@ -5,6 +5,19 @@ import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
 
+
+const MenuLink = ({ label, to, activeOnlyWhenExact }) => {
+    return (
+        <Route path={to} exact={activeOnlyWhenExact} children={(match) => {
+            var active = match ? 'active abc' : '';
+            return (
+                <li className={active}>
+                    <NavLink to={to} title="check">Trang chủ</NavLink>
+                </li>
+            );
+        }} />
+    );
+}
 class App extends Component {
     render() {
         return (
@@ -14,13 +27,13 @@ class App extends Component {
                     <nav className="navbar navbar-inverse">
                         <ul className="nav navbar-nav">
                             <li className="active">
-                                <NavLink activeClassName="active" exact to='/' title="check">Trang chủ</NavLink>
+                                <NavLink exact to='/' title="check">Trang chủ</NavLink>
                             </li>
                             <li>
-                                <NavLink activeClassName="active" to='/about'>Giới thiệu</NavLink>
+                                <NavLink to='/about'>Giới thiệu</NavLink>
                             </li>
                             <li>
-                                <NavLink activeClassName="active" to='/contact'>Liên hệ</NavLink>
+                                <NavLink to='/contact'>Liên hệ</NavLink>
                             </li>
                         </ul>
                     </nav>
