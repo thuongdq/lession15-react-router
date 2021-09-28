@@ -23,7 +23,7 @@ class App extends Component {
         return (
             <Router>
                 <div className="App" >
-                    {/* Menu Link */}
+                    {/* Menu */}
                     <nav className="navbar navbar-inverse">
                         <ul className="nav navbar-nav">
                             <li className="active">
