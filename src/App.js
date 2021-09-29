@@ -24,7 +24,7 @@ class App extends Component {
             <Router>
                 <div className="App" >
                     {/* Menu */}
-                    <nav className="navbar navbar-inverse">
+                    <nav className="navbar navbar-default">
                         <ul className="nav navbar-nav">
                             <li className="active">
                                 <NavLink exact to='/' title="check">Trang chủ</NavLink>
